@@ -7,7 +7,7 @@ RUN mkdir -p /usr/share/tomcat
 RUN wget --no-verbose -O /tmp/apache-tomcat-$TOMCAT_VERSION.tar.gz \
     http://archive.apache.org/dist/tomcat/tomcat-6/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz
 # stop building if md5sum does not match
-RUN echo "f90b100cf51ae0a444bef5acd7b6edb2 /tmp/apache-tomcat-$TOMCAT_VERSION.tar.gz" | \
+RUN echo "f90b100cf51ae0a444bef5acd7b6edb2  /tmp/apache-tomcat-$TOMCAT_VERSION.tar.gz" | \
     md5sum -c
 # install tomcat in /usr/share/tomcat
 RUN tar xzf /tmp/apache-tomcat-$TOMCAT_VERSION.tar.gz \
